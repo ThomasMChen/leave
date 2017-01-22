@@ -26,19 +26,18 @@
             android:layout_height="wrap_content"
             android:text="L e a v e"
             android:textSize="18sp"
-            android:id="@+id/logoTxt"
+            android:id="@+id/txtLogo"
             android:textAllCaps="true"
             android:textColor="?android:attr/textColorPrimary" />
-
 
         <Button
             android:layout_gravity="right"
             android:background="@drawable/settings"
             android:layout_width="5dp"
             android:layout_height="19dp"
-            android:layout_marginRight="15dp"
-            android:id="@+id/settingBtn"
-            android:paddingRight="40dp" />
+            android:layout_marginRight="20dp"
+            android:id="@+id/btnSetting"
+            android:padding="40dp" />
 
     </android.support.v7.widget.Toolbar>
 
@@ -63,7 +62,7 @@
 
             <ImageView
                 app:srcCompat="@drawable/alarmicon"
-                android:id="@+id/alarmImg"
+                android:id="@+id/imgAlarm"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginStart="16dp"
@@ -80,7 +79,7 @@
                 android:textColor="@color/subduedTextColor"
                 android:textSize="30sp"
                 android:layout_marginStart="16dp"
-                app:layout_constraintLeft_toRightOf="@+id/alarmImg"
+                app:layout_constraintLeft_toRightOf="@+id/imgAlarm"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="10dp"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -133,7 +132,7 @@
         android:layout_width="wrap_content"
         android:layout_height="32dp"
         app:srcCompat="@android:drawable/ic_menu_add"
-        android:id="@+id/addBtn"
+        android:id="@+id/btnAdd"
         android:background="@color/transparent"
         tools:layout_editor_absoluteY="-29dp"
         tools:layout_editor_absoluteX="8dp"

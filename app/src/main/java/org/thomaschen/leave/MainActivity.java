@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button settingsBtn = (Button) findViewById(R.id.settingBtn);
-        ImageButton addBtn = (ImageButton) findViewById(R.id.addBtn);
+        Button settingsBtn = (Button) findViewById(R.id.btnSetting);
+        ImageButton addBtn = (ImageButton) findViewById(R.id.btnAdd);
 
-        final Switch switchBtn = (Switch) findViewById(R.id.switch1);
+        Switch switchBtn = (Switch) findViewById(R.id.switch1);
 
         settingsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         switchBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                ConstraintLayout alarm = (ConstraintLayout) switchBtn.getParent();
+                ConstraintLayout alarm = (ConstraintLayout) buttonView.getParent();
 
                 if (!isChecked) {
                     for (int i = 0; i < alarm.getChildCount(); i++) {

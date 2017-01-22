@@ -1,9 +1,13 @@
 package org.thomaschen.leave;
 
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.Switch;
+import android.widget.TextView;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -12,7 +16,7 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        ImageButton backBtn = (ImageButton) findViewById(R.id.backBtn);
+        ImageButton backBtn = (ImageButton) findViewById(R.id.btnBack);
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -20,5 +24,21 @@ public class SettingsActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
+        Switch lightSwitch = (Switch) findViewById(R.id.switchLight);
+        Switch notifSwitch = (Switch) findViewById(R.id.switchNotif);
+        Switch soundSwitch = (Switch) findViewById(R.id.switchSound);
+
+        lightSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (!isChecked) {
+
+                } else {
+
+                }
+            }
+
+        });
+
     }
 }

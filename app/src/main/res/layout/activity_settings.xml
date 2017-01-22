@@ -13,27 +13,108 @@
         android:background="#253748"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="L e a v e"
             android:textSize="18sp"
-            android:id="@+id/logoTxt"
+            android:id="@+id/txtLogo"
             android:textAllCaps="true"
             android:textColor="?android:attr/textColorPrimary" />
 
 
         <ImageButton
             android:layout_gravity="right"
-            android:id="@+id/backBtn"
+            android:id="@+id/btnBack"
             android:background="@drawable/back"
             android:textSize="20sp"
             android:layout_marginRight="15dp"
-            android:layout_width="20dp"
-            android:layout_height="25dp" />
+            android:layout_width="19dp"
+            android:layout_height="24dp" />
 
     </android.support.v7.widget.Toolbar>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/toolbar">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:weightSum="2">
+
+            <TextView
+                android:text="Light Theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lightThemeText"
+                android:textSize="22sp"
+                android:elevation="0dp"
+                android:layout_weight="1" />
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/switchLight"
+                android:layout_weight="1" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:text="Notifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/notifText"
+                android:textSize="22sp"
+                android:elevation="0dp"
+                android:layout_weight="1" />
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/switchNotif"
+                android:layout_weight="1" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:text="Sound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/soundText"
+                android:textSize="22sp"
+                android:elevation="0dp"
+                android:layout_weight="1" />
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/switchSound"
+                android:layout_weight="1" />
+
+        </TableRow>
+
+    </TableLayout>
 
 </RelativeLayout>
