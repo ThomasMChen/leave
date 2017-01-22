@@ -25,17 +25,17 @@
             android:textSize="18sp"
             android:id="@+id/btnCancel"
             android:textAllCaps="true"
-            android:textColor="?android:attr/textColorPrimary" />
+            android:textColor="?android:attr/textColorPrimary"
+            android:background="@color/transparent" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Edit Alarm"
-            android:layout_centervertical="true"
             android:textSize="18sp"
             android:id="@+id/editAlarm"
             android:textAllCaps="true"
-            android:textColor="?android:attr/textColorPrimary"
+            android:textColor="@color/colorAccent"
             android:layout_marginBottom="16dp"
             android:layout_alignBottom="@+id/toolbar"
             android:layout_centerHorizontal="true"
@@ -50,44 +50,47 @@
             android:textSize="18sp"
             android:id="@+id/btnDone"
             android:textAllCaps="true"
-            android:textColor="?android:attr/textColorPrimary" />
+            android:textColor="?android:attr/textColorPrimary"
+            android:background="@color/transparent" />
 
     </android.support.v7.widget.Toolbar>
 
-    <TimePicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="63dp"
-        android:id="@+id/timePicker" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="false"
+        android:gravity="center_vertical">
 
-    <TextView
-        android:text="LABEL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/timePicker"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="51dp"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="75dp"
-        android:id="@+id/textView3" />
+        <TimePicker
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:id="@+id/timePicker"
+            android:headerBackground="@color/transparent"
+            android:numbersBackgroundColor="@color/colorPrimary" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_below="@+id/timePicker"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="41dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginTop="63dp"
-        android:id="@+id/etextLabel"
-        android:hint="ENTER LABEL" />
+        <EditText
+            android:layout_width="match_parent"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_marginRight="20dp"
+            android:id="@+id/etextLabel"
+            android:hint="ENTER LABEL"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentEnd="false"
+            android:background="@color/colorPrimary"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:text="Enter Label..."
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:paddingLeft="15dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
 
 
 </RelativeLayout>
