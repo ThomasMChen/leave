@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.thomaschen.leave">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/logo_launcher"
@@ -12,18 +16,27 @@
             android:name=".SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/SplashTheme">
+
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCj2raNnK0XlXreAtWxHSsvZ_zLq17GoTk" />
+
+        <activity
+            android:name=".TriggerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".MainActivity" />
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".TriggerActivity" />
         <activity android:name=".MapActivity" />
         <activity android:name=".ClockActivity"></activity>
     </application>

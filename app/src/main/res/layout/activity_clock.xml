@@ -31,7 +31,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Edit Alarm"
-            android:layout_centervertical="true"
             android:textSize="18sp"
             android:id="@+id/editAlarm"
             android:textAllCaps="true"
