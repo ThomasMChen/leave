@@ -17,43 +17,57 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp">
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cancel"
-            android:textSize="18sp"
-            android:id="@+id/btnCancel"
-            android:textAllCaps="true"
-            android:textColor="?android:attr/textColorPrimary"
-            android:background="@color/transparent" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textSize="18sp"
+                android:id="@+id/btnCancel"
+                android:textAllCaps="true"
+                android:textColor="?android:attr/textColorPrimary"
+                android:background="@color/transparent"
+                android:layout_weight="1" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Edit Alarm"
-            android:textSize="18sp"
-            android:id="@+id/editAlarm"
-            android:textAllCaps="true"
-            android:textColor="@color/colorAccent"
-            android:layout_marginBottom="16dp"
-            android:layout_alignBottom="@+id/toolbar"
-            android:layout_centerHorizontal="true"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Alarm"
+                android:textSize="18sp"
+                android:id="@+id/editAlarm"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAccent"
+                android:layout_marginBottom="16dp"
+                android:layout_alignBottom="@+id/toolbar"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:layout_weight="2"
+                android:textAlignment="center" />
 
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Done"
-            android:textSize="18sp"
-            android:id="@+id/btnDone"
-            android:textAllCaps="true"
-            android:textColor="?android:attr/textColorPrimary"
-            android:background="@color/transparent" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Done"
+                android:textSize="18sp"
+                android:id="@+id/btnDone"
+                android:textAllCaps="true"
+                android:textColor="?android:attr/textColorPrimary"
+                android:background="@color/transparent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
 
     </android.support.v7.widget.Toolbar>
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -78,14 +92,13 @@
             android:ems="10"
             android:layout_marginRight="20dp"
             android:id="@+id/etextLabel"
-            android:hint="ENTER LABEL"
             android:layout_alignParentRight="false"
             android:layout_alignParentEnd="false"
             android:background="@color/colorPrimary"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="50dp"
             android:layout_marginBottom="20dp"
-            android:text="Enter Label..."
+            android:hint="Enter Label..."
             android:textColor="@color/white"
             android:textSize="18sp"
             android:paddingLeft="15dp"

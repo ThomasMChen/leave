@@ -1,14 +1,19 @@
 package org.thomaschen.leave;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Switch;
+import android.widget.TextClock;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(MainActivity.this, ClockActivity.class);
+                startActivityForResult(i, 1);
             }
         });
 
@@ -51,6 +57,10 @@ public class MainActivity extends AppCompatActivity {
                         if (alarm.getChildAt(i) instanceof TextView) {
                             ((TextView) alarm.getChildAt(i)).setTextColor(getResources().getColor(R.color.subduedTextColor));
                         }
+
+                        if (alarm.getChildAt(i) instanceof TextClock) {
+                            ((TextClock) alarm.getChildAt(i)).setTextColor(getResources().getColor(R.color.subduedTextColor));
+                        }
                     }
 
                 } else {
@@ -58,9 +68,24 @@ public class MainActivity extends AppCompatActivity {
                         if (alarm.getChildAt(i) instanceof TextView) {
                             ((TextView) alarm.getChildAt(i)).setTextColor(getResources().getColor(R.color.white));
                         }
+
+                        if (alarm.getChildAt(i) instanceof TextClock) {
+                            ((TextClock) alarm.getChildAt(i)).setTextColor(getResources().getColor(R.color.white));
+                        }
                     }
                 }
 
+            }
+        });
+
+        ConstraintLayout alarm = (ConstraintLayout) switchBtn.getParent();
+
+        alarm.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+
+                return true;
             }
         });
 

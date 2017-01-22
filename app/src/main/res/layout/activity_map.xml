@@ -25,6 +25,17 @@
             android:textAllCaps="true"
             android:textColor="?android:attr/textColorPrimary" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:textSize="18sp"
+            android:id="@+id/btnMapDone"
+            android:textAllCaps="true"
+            android:textColor="?android:attr/textColorPrimary"
+            android:background="@color/transparent"
+            android:layout_gravity="right"/>
+
     </android.support.v7.widget.Toolbar>
 
     <android.support.constraint.ConstraintLayout
@@ -42,10 +53,10 @@
             android:layout_marginBottom="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             android:textColor="@android:color/black"
-            android:background="@color/white"
+            android:background="@color/colorPrimary"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
-            android:text="Enter Destination..."
+            android:hint="Enter Destination..."
             android:textSize="14sp"
             android:paddingLeft="10dp"
             android:layout_height="30dp" />
