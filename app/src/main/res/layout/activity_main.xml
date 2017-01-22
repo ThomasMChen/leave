@@ -37,7 +37,8 @@
             android:layout_width="5dp"
             android:layout_height="19dp"
             android:layout_marginRight="15dp"
-            android:id="@+id/settingBtn" />
+            android:id="@+id/settingBtn"
+            android:paddingRight="40dp" />
 
     </android.support.v7.widget.Toolbar>
 
@@ -54,9 +55,10 @@
             android:layout_marginRight="15dp"
             android:layout_marginLeft="15dp"
             android:background="@drawable/rounded_corners"
-            android:backgroundTint="#f2f2f2"
+            android:backgroundTint="?attr/colorPrimaryDark"
             android:layout_height="80dp"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:id="@+id/alarm1">
 
 
             <ImageView
@@ -75,13 +77,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/numTime"
-                android:textColor="@android:color/black"
+                android:textColor="@color/subduedTextColor"
                 android:textSize="30sp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="16dp"
                 app:layout_constraintLeft_toRightOf="@+id/alarmImg"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp" />
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:text="Gym"
@@ -89,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/locationText"
                 android:textSize="15sp"
-                android:textColor="@color/locationTextColor"
+                android:textColor="@color/subduedTextColor"
                 tools:layout_conversion_absoluteX="79dp"
                 tools:layout_conversion_absoluteY="116dp"
                 tools:layout_conversion_absoluteWidth="40dp"
@@ -104,7 +106,7 @@
                 android:text="AM"
                 android:layout_height="wrap_content"
                 android:id="@+id/timePeriodText"
-                android:textColor="@android:color/black"
+                android:textColor="@color/subduedTextColor"
                 android:textSize="20sp"
                 android:layout_width="wrap_content"
                 app:layout_constraintBaseline_toBaselineOf="@+id/numTime"
