@@ -24,7 +24,8 @@
             android:label="@string/title_activity_settings"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".TriggerActivity" />
-        <activity android:name=".MapActivity"></activity>
+        <activity android:name=".MapActivity" />
+        <activity android:name=".ClockActivity"></activity>
     </application>
 
 </manifest>
