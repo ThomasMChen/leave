@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#ff25363c</color>
-    <color name="colorPrimaryDark">#ff1a212c</color>
-    <color name="colorAccent">#ff26b0b5</color>
+    <color name="colorPrimaryDark">#1a212c</color>
+    <color name="colorAccent">#26b0b5</color>
     <color name="subduedTextColor">#9e334a4e</color>
     <color name="transparent">#00ffffff</color>
-    <color name="white">#ffffffff</color>
+    <color name="white">#ffffff</color>
 </resources>
