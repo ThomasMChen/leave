@@ -1,5 +1,6 @@
 package org.thomaschen.leave;
 
+import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,10 +30,9 @@ public class SettingsActivity extends AppCompatActivity {
         Switch notifSwitch = (Switch) findViewById(R.id.switchNotif);
         Switch soundSwitch = (Switch) findViewById(R.id.switchSound);
 
-        lightSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        notifSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (!isChecked) {
-
                 } else {
 
                 }

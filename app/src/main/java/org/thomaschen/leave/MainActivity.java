@@ -2,6 +2,7 @@ package org.thomaschen.leave;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -19,12 +20,45 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+
+import static android.R.attr.data;
+
 public class MainActivity extends AppCompatActivity {
+
+    public static final String ALARM_PREFERENCES = "AlarmPrefs";
+    SharedPreferences settings;
+    SharedPreferences.Editor prefEditor;
+
+    public ArrayList<Alarm> alarmList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        initializePref();
+
+        String className = getIntent().getStringExtra("caller");
+
+        //Toast.makeText(this, className, Toast.LENGTH_SHORT).show();
+
+        if (className.contains("MapActivity")) {
+
+            //Toast.makeText(this, "after", Toast.LENGTH_SHORT).show();
+
+            SharedPreferences prefs = getSharedPreferences("AlarmPrefs", MODE_PRIVATE);
+            String label = prefs.getString("Label","Default");
+            String finalAlarm = prefs.getString("FinalAlarm","Default");
+            String triggerAlarm = prefs.getString("TriggerAlarm","Default");
+            String txtAddress = prefs.getString("TextAddress","Default");
+
+            alarmList.add(new Alarm(label, txtAddress, finalAlarm, triggerAlarm));
+
+            //Toast.makeText(this, alarmList.get(1).toString(), Toast.LENGTH_SHORT).show();
+        }
+
 
         Button settingsBtn = (Button) findViewById(R.id.btnSetting);
         ImageButton addBtn = (ImageButton) findViewById(R.id.btnAdd);
@@ -37,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(MainActivity.this, SettingsActivity.class);
                 startActivityForResult(i, 1);
             }
-        } );
+        });
 
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,16 +112,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        /*
         ConstraintLayout alarm = (ConstraintLayout) switchBtn.getParent();
 
         alarm.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-
-
                 return true;
             }
         });
-
+        */
     }
+
+    public void initializePref() {
+        SharedPreferences settings = getSharedPreferences("AlarmPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor prefEditor = settings.edit();
+        prefEditor.putString("Label", "");
+        prefEditor.putString("FinalAlarm", "");
+        prefEditor.putString("TriggerAlarm", "");
+        prefEditor.putString("TextAddress", "");
+        prefEditor.commit();
+    }
+
 }
+
